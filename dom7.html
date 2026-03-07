@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 40px;
+    }
+    button{
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    .box{
+        background: lightblue;
+        padding: 10px;
+        margin: 5px;
+    }
+</style>
+<body>
+    <h1 id="title">dom</h1>
+    <button onclick="createelement()">create elemnt</button>
+    <button onclick="appendExample()">append child</button>
+    <button onclick="prependExample()">prpend elemnt</button>
+    <button onclick="insertBeforeExp()">insertbefore</button>
+    <button>create elemnt</button>
+    <button>create elemnt</button>
+    <button>create elemnt</button>
+    <button>create elemnt</button>
+    <hr>
+    <div id="container"></div>
+    <ul id="list">
+        <li>old item</li>
+    </ul>
+</body>
+<script>
+
+    let createelement=()=>{
+
+        let el=document.createElement("div");
+        el.innerText="new element created";
+        el.classList.add("box");
+
+       document.getElementById("container").appendChild(el)
+    }
+
+
+    function appendExample(){
+        let li=document.createElement("li");
+        li.innerText="appended text"
+        document.getElementById("list").appendChild(li)
+    }
+    function prependExample(){
+        let li=document.createElement("li");
+        li.innerText="prepend text"
+        document.getElementById("list").prepend(li)
+    }
+
+
+ function insertBeforeExp(){
+        let newitem=document.createElement("li");
+        newitem.innerText="inserted before first";
+
+        let list=document.getElementById("list");
+
+
+         list.insertBefore(newitem,list.firstElementChild)
+        
+    }
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let mypromises= new Promise(function(resolve,reject){
+        let sucess=false
+        if (sucess){
+            resolve("task completed")
+        }else{
+            reject("task failed")
+        }
+    })
+
+
+    mypromises
+    .then(function(result){
+        console.log(result)
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+    .finally(function(){
+        console.log("task finished")
+    })
+
+
+    let pro=new Promise(function(resolve,reject){
+        resolve(10)
+    })
+
+    pro
+.then(function(num){
+        console.log("s1",num)
+        return num*2
+    })
+.then(function(num){
+        console.log("s2",num)
+        return num*3
+    })
+.then(function(result){
+        console.log(result)
+       
+    })
+</script>
+</html>

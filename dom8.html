@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+        margin: 20px;
+        text-align: center;
+        line-height: 200px;
+    }
+</style>
+<body>
+    <h2>event handling</h2>
+    <button id="btn">click me</button>
+    <div id="box">hover me</div>
+
+    <input type="text" id="keyboard" placeholder="type something">
+
+
+    <form action="" id="form">
+        <input type="text" name="" id="">
+        <button type="submit">submit</button>
+    </form>
+</body>
+<script>
+document.getElementById("btn").addEventListener("click",()=>{
+    alert("button clicked")
+})
+
+let box=document.getElementById("box")
+box.addEventListener("mouseover",()=>{
+    box.style.background="yellow"
+    box.innerText="mouse over"
+})
+box.addEventListener("mouseout",()=>{
+    box.style.background="red"
+    box.innerText="hover me"
+})
+document.getElementById("keyboard").addEventListener("keypress",()=>{
+    console.log("e.key")
+})
+document.getElementById("form")
+.addEventListener("submit",(e)=>{
+    e.preventDefault()
+
+    console.log("form submited")
+})
+</script>
+</html>

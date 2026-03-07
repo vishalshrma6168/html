@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="abc"></h1>
+    <h2 id="h">hello vishal</h2>
+    <button id="btn">submit</button>
+
+
+</body>
+<script>
+    let h1=document.getElementById("abc")
+    h1.innerText="hello dom"
+    console.log(h1)
+
+    let a=document.getElementById("h")
+    a.style.color="red"
+    a.style.fontSize="30px"
+
+
+    let btn=document.getElementById("btn")
+   btn.addEventListener("click",function (){
+    alert("btn clicked")
+   })
+
+
+   let p=document.createElement("p");
+   p.innerText="new para";
+   p.style.color="green"
+   document.body.appendChild("p");
+</script>
+</html>

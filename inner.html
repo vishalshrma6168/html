@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#box{
+    border:  2px solid black;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+.hidden{
+    display: none;
+}
+
+</style>
+<body>
+    <h2>dom</h2>
+
+    <div id="box">
+        hello
+        <span class="hidden">world</span>
+        <b>javascript</b>
+
+    </div>
+
+
+    <!-- <button >inner text</button>
+    <button>text content</button>
+    <button>innerhtml</button> -->
+
+<p id="output"></p>
+
+<hr>
+<h3>set values</h3>
+
+    <button onclick="setinnertext()" > set inner text</button>
+    <button onclick="settextcontent()"> set text content</button>
+    <button onclick="setinnerhtml()"> set innerhtml</button>
+
+</body>
+
+<script>
+
+
+
+
+const box=document.getElementById("box")
+const output=document.getElementById("output")
+
+
+
+
+
+
+
+
+
+
+
+
+// set values
+
+
+function setinnertext(){
+    box.textContent="this is \ninner text"
+}
+
+
+function settextcontent(){
+ box.innerText="this is \ntextcontent"
+}
+function setinnerhtml(){
+    box.innerHTML="<b> this is innerhtml</b><i>with tags</i>"
+}
+
+
+</script>
+</html>

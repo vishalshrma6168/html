@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+    <h2>local storage</h2>
+    <input type="text" id="nameInput">
+    <button onclick="savedata()">save</button>
+    <button onclick="clearData()">clear</button> 
+
+    <h3 id="output"></h3>
+</body>
+<script>
+window.onload=function(){
+    let saveName=localStorage.getItem("username")
+    if(saveName){
+        document.getElementById("output").innerText="welcome"+saveName;
+    }
+}
+
+function savedata(){
+    let name=document.getElementById("nameInput").value;
+    localStorage.setItem("username",name);
+    document.getElementById("output").innerText="welcome"+name
+}
+
+
+function clearData(){
+    localStorage.removeItem("username")
+    document.getElementById("output").innerText="weclome"+name;
+}
+
+</script>
+</html>

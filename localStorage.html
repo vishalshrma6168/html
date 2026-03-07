@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+input{
+    padding: 8px;
+    cursor: pointer;
+}
+li{
+    margin: 10px;
+}
+</style>
+<body>
+    <h2>local storage with todo</h2>
+    <input type="text" name="" id="task">
+    <button onclick="addtask()">add</button>
+    <ul id="list"></ul>
+</body>
+<script>
+    let tasks=JSON.parse(localStorage.getItem("tasks")) ||[];
+    function showTasks(){
+        let list=document.getElementById("list")
+        list.innerHTML ="",
+        tasks.forEach((task,index)=>{
+            list.innerHTML+=` 
+           <li>
+            ${task}
+            <button onclick="deleteTask(${index})">delete</button>
+          </li>`;
+        })
+        
+    
+    }
+
+    function addtask(){
+        let taskinput=document.getElementById("task")
+        let task =taskinput.value;
+
+        if (task ==="") return alert("enter a task")
+        tasks.push(task);
+    localStorage.setItem("tasks",JSON.stringify(tasks))
+    taskinput.value="";
+    showTasks()
+    }
+
+
+    function deleteTask(index){
+        tasks.splice(index,1);
+        localStorage.setItem("tasks",JSON.stringify(tasks));
+        showTasks()
+    }
+
+showTasks();
+</script>
+</html>

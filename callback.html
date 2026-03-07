@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function greet(name,callback){
+    //     console.log("hello" +name);
+    //     callback()
+    // }
+    // function saybye(){
+    //     console.log("goodbye")
+    // }
+    // greet("vishal",saybye())
+
+
+//   function add(a,b,callback){
+//     let sum=a+b;
+//     callback(sum);
+//   }
+
+// add(5,7,function(result){
+//     console.log("sum i s:",result)
+//   })
+
+
+
+// console.log("start")
+// setTimeout(function(){
+//     console.log("2 second baad")
+// },2000)
+
+
+
+
+// console.log("end")
+
+
+// console.log("start")
+//  async function abc(){
+
+
+// await setTimeout(function(){
+//     console.log("2 second baad")
+// },2000)
+
+
+// }
+// abc()
+// console.log("end")
+
+
+function calculate(a,b,operation){
+    return operation(a,b)
+}
+
+function add(x,y){
+    return x+y
+}
+function mult(x,y){
+    return x*y
+}
+
+console.log(calculate(5,6,add))
+console.log(calculate(3,4,mult))
+
+
+
+</script>
+</html>

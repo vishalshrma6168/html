@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     let pro=new Promise(function (resolve,reject){
+//         let sucess=false
+//         if(sucess){
+//      resolve("data have been upload")
+//         }else{
+//             reject("data have not uploaded")
+//         }
+        
+
+//     });
+
+
+// pro.then(function(result){
+//     console.log(result)
+// })
+// .catch((err)=>{
+// console.log(err)
+// })
+
+
+
+
+// new Promise((res,rej)=>{
+//     res(12);
+// })
+// .then(num=>{
+//     return num *2
+// })
+// .then(result=>{
+//     console.log(result)
+// })
+// .catch(err=>{
+//     console.log(err)
+// })
+
+
+// new Promise((resolve,reject)=>{
+//     reject("sever error")
+
+
+// })
+// .then(data=>{
+//     console.log(data)
+// })
+// .catch(err=>{
+//     console.log(err)
+// })
+
+
+// async function test(){
+//    let a=44;
+//    await console.log(a)
+   
+// }
+
+
+
+// setTimeout(()=>{
+//     console.log("hello")
+// },3000)
+
+// test()
+
+
+
+
+
+console.log("hii")
+function waitTwoSec(){
+    return new Promise((reslove)=>{
+        setTimeout(()=>{
+            reslove("hello ag=fter 2 sec")
+        },2000)
+    })
+}
+
+async function showmessage(){
+    let message=await waitTwoSec();
+    console.log(message)
+
+}
+console.log("byy")
+showmessage()
+</script>
+</html>

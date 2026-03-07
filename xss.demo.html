@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h2>search page</h2>
+    <form method="get">
+        <input type="text" name="q" id="" placeholder="search here">
+        <button type="submit">search</button>
+    </form>
+    <p>
+        result for
+        <script>
+            document.write(location.search.substring(3)
+        .replace(/</g>"&lt;")
+        .replace(/>/g,"&gt;")
+
+    );
+        </script>
+    </p>
+    
+</body>
+</html>

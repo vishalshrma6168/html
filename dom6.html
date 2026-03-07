@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>dom create elemt</h2>
+    <button onclick="additem()">add item</button>
+    <ul id="list"></ul>
+</body>
+<script>
+    function additem(){
+
+    
+    let li=document.createElement("li")
+
+    li.innerText="new list added"
+    li.className="item"
+    document.getElementById("list").appendChild(li);
+    }
+</script>
+</html>

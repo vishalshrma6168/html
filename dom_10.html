@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Complete DOM Tutorial</title>
+
+<style>
+body{
+font-family: Arial;
+margin:40px;
+}
+
+.box{
+border:1px solid black;
+padding:15px;
+margin:10px 0;
+}
+
+button{
+margin:5px;
+padding:8px 12px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="title">DOM Tutorial</h1>
+
+<div class="box">
+
+<h2>1. Change Text</h2>
+
+<p id="text">Hello World</p>
+
+<button onclick="changeText()">Change Text</button>
+
+</div>
+
+
+<div class="box">
+
+<h2>2. Change CSS Style</h2>
+
+<p id="styleText">Change my color</p>
+
+<button onclick="changeStyle()">Change Style</button>
+
+</div>
+
+
+<div class="box">
+
+<h2>3. Event Listener</h2>
+
+<button id="eventBtn">Click Me</button>
+
+<p id="eventResult"></p>
+
+</div>
+
+
+<div class="box">
+
+<h2>4. Create Element</h2>
+
+<button onclick="addElement()">Add Paragraph</button>
+
+<div id="container"></div>
+
+</div>
+
+
+<div class="box">
+
+<h2>5. Remove Element</h2>
+
+<p id="removeMe">Remove this paragraph</p>
+
+<button onclick="removeElement()">Remove</button>
+
+</div>
+
+
+<div class="box">
+
+<h2>6. DOM Traversing</h2>
+
+<ul id="list">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+
+<button onclick="showFirst()">First Child</button>
+<button onclick="showLast()">Last Child</button>
+
+<p id="traverseResult"></p>
+
+</div>
+
+
+<script>
+
+/* ==============================
+1. Change Text using DOM
+============================== */
+
+function changeText(){
+
+let element = document.getElementById("text")
+
+element.innerText="Text Changed Using DOM"
+
+}
+
+
+/* ==============================
+2. Change CSS Style
+============================== */
+
+function changeStyle(){
+
+let el=document.getElementById("styleText")
+
+el.style.color="red"
+el.style.fontSize="25px"
+el.style.background="yellow"
+
+}
+
+
+/* ==============================
+3. Event Listener
+============================== */
+
+let btn=document.getElementById("eventBtn")
+
+btn.addEventListener("click",function(){
+
+document.getElementById("eventResult").innerText="Button Clicked!"
+
+})
+
+
+/* ==============================
+4. Create Element
+============================== */
+
+function addElement(){
+
+let p=document.createElement("p")
+
+p.innerText="New Paragraph Created"
+
+document.getElementById("container").appendChild(p)
+
+}
+
+
+/* ==============================
+5. Remove Element
+============================== */
+
+function removeElement(){
+
+let el=document.getElementById("removeMe")
+
+el.remove()
+
+}
+
+
+/* ==============================
+6. DOM Traversing
+============================== */
+
+function showFirst(){
+
+let list=document.getElementById("list")
+
+let first=list.firstElementChild.innerText
+
+document.getElementById("traverseResult").innerText="First Item: "+first
+
+}
+
+function showLast(){
+
+let list=document.getElementById("list")
+
+let last=list.lastElementChild.innerText
+
+document.getElementById("traverseResult").innerText="Last Item: "+last
+
+}
+
+</script>
+
+</body>
+</html>
