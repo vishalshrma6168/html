@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="h">hello</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptas voluptate soluta quos assumenda odit saepe, quia magni cum perspiciatis placeat dolore nesciunt quo, sequi mollitia? Veniam maiores vitae pariatur.</p>
+
+<p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas eum saepe fuga, placeat unde neque laborum est. Recusandae esse tempora itaque cum, blanditiis iure possimus? Consequatur fuga fugiat sit.</p>
+
+<h3 class="abc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eos pariatur sint. Recusandae voluptatum quam, autem cupiditate id assumenda dicta debitis incidunt officiis libero totam, ex voluptas minus repellendus. Non.</h3>
+    <h4 id="xy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit totam rem laudantium numquam aut odit accusantium expedita consequatur adipisci molestiae ab odio sit natus sint quas beatae blanditiis, soluta consequuntur.</h4>
+    <p id="create"></p>
+    <div id="divA">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eaque delectus fugiat, ullam quasi rem doloremque accusamus! Nostrum modi autem ea doloremque odio quidem explicabo voluptates, repellat possimus voluptatibus harum!</p>
+
+    </div>
+</body>
+<script>
+  let first=  document.getElementById("h")
+  console.log(first)
+
+  let p1=document.getElementsByTagName("p")
+  console.log(p1)
+let p2=document.getElementsByClassName("p2")
+console.log(p2)
+
+let abc=document.querySelector(".abc")
+console.log(abc)
+
+let x=document.querySelectorAll("#xy")
+console.log(x)
+let create=document.getElementById("create")
+create.innerText="hello vishal"
+
+let divA=document.getElementById("divA")
+
+let newPara=document.createElement("p")
+newPara.innerText="bye vishal"
+divA.after(newPara)
+
+</script>
+</html>

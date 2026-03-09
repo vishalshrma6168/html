@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+       
+        margin: 40px;
+    }
+    .box{
+        border: 1px solid black;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    button{
+        margin: 5px;
+        padding: 8px 12px;
+    }
+</style>
+<body>
+    <h1 id="title">dom</h1>
+    <div class="box">
+        <h1>1.change text</h1>
+     <p id="text">hello world</p>
+  <button onclick="changeText()">change text</button>  
+    </div>
+
+
+    <div class="box">
+        <h2>2.change css</h2>
+        <p id="styleText">change my text</p>
+        <button onclick="changeStyle()">change style</button>
+    </div>
+
+    <div class="box">
+        <h2>3.event Listener</h2>
+        <button id="eventBtn">click me</button>
+        <p id="eventResult"></p>
+
+    </div>
+
+    <div class="box">
+        <h2>create element</h2>
+        <button onclick="addElement()">add para</button>
+  <div id="container"></div>
+    </div>
+
+
+
+    <div class="box">
+
+        <h5>remove element</h5>
+        <p id="removeMe"> remove this para</p>
+        <button onclick="removeElement()">remove</button>
+    </div>
+
+    <div class="box">
+        <h2>dom traversing</h2>
+        <ul id="list">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <button onclick="shoWfirst()">first child</button>
+        <button onclick="showLast()">last child</button>
+        <p id="traverseResult"></p>
+
+    </div>
+
+    
+</body>
+<script>
+    function changeText(){
+        let element=document.getElementById("text")
+        element.innerText="hello  vishal"
+    }
+
+    function changeStyle(){
+        let el=document.getElementById("styleText")
+        el.style.color="red"
+        el.style.fontSize="30px"
+        el.style.background="yellow"
+    }
+
+let btn=document.getElementById("eventBtn")
+btn.addEventListener("click",function(){
+    document.getElementById("eventResult").innerText="button clicked"
+})
+
+
+function addElement(){
+    let p=document.createElement("p")
+    p.innerText="new para created"
+    document.getElementById("container").appendChild(p)
+}
+
+function removeElement(){
+    let el=document.getElementById("removeMe")
+    el.remove()
+}
+
+function shoWfirst(){
+    let list=document.getElementById("list")
+    let first=list.firstElementChild.innerText
+    document.getElementById("traverseResult").innerText="fisrt item:"+first
+}
+function showLast(){
+    let list=document.getElementById("list")
+    let last=list.lastElementChild.innerText
+    document.getElementById("traverseResult").innerText="last item"+last
+}
+</script>
+
+
+
+</html>
